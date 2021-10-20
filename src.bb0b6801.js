@@ -3,10 +3,10 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"LLK9":[function(require,module,exports) {
 const e=e=>new Promise(o=>setTimeout(()=>{o(e)},e)),o=e=>console.log(`Resolved after ${e}ms`);e(2e3).then(o),e(1e3).then(o),e(1500).then(o);
 },{}],"EEVQ":[function(require,module,exports) {
-const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>new Promise(n=>{n(e.map(e=>e.name===a?{...e,active:!e.active}:e))}),n=e=>console.table(e);a(e,"Mango").then(n),a(e,"Lux").then(n);
+const e=[{name:"Mango",active:!0},{name:"Poly",active:!1},{name:"Ajax",active:!0},{name:"Lux",active:!1}],a=(e,a)=>Promise.resolve(e.map(e=>e.name===a?{...e,active:!e.active}:e)),n=e=>console.table(e);a(e,"Mango").then(n),a(e,"Lux").then(n);
 },{}],"LiEu":[function(require,module,exports) {
 const o=(o,a)=>Math.floor(Math.random()*(a-o+1)+o),a=(a,n,t)=>{const r=o(200,500);setTimeout(()=>{Math.random()>.3?n(a.id,r):t(a.id)},r)},n=(o,a)=>{console.log(`Transaction ${o} processed in ${a}ms`)},t=o=>{console.warn(`Error processing transaction ${o}. Please try again later.`)};a({id:70,amount:150},n,t),a({id:71,amount:230},n,t),a({id:72,amount:75},n,t),a({id:73,amount:100},n,t);
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/task-1"),require("./js/task-2"),require("./js/task-3");
 },{"./sass/main.scss":"clu1","./js/task-1":"LLK9","./js/task-2":"EEVQ","./js/task-3":"LiEu"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification/src.44eb3081.js.map
+//# sourceMappingURL=/goit-js-hw-11-promisification/src.bb0b6801.js.map
