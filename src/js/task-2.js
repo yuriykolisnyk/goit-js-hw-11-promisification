@@ -5,20 +5,20 @@ const users = [
   { name: 'Lux', active: false },
 ];
 
-// const toggleUserState = (allUsers, userName) => {
-//   return new Promise(resolve => {
-//     const updatedUsers = allUsers.map(user =>
-//       user.name === userName ? { ...user, active: !user.active } : user,
-//     );
-//     resolve(updatedUsers);
-//   });
-// };
-
 const toggleUserState = (allUsers, userName) => {
-  return Promise.resolve(
-    allUsers.map(user => (user.name === userName ? { ...user, active: !user.active } : user)),
-  );
+  return new Promise(resolve => {
+    const updatedUsers = allUsers.map(user =>
+      user.name === userName ? { ...user, active: !user.active } : user,
+    );
+    resolve(updatedUsers);
+  });
 };
+
+// const toggleUserState = (allUsers, userName) => {
+//   return Promise.resolve(
+//     allUsers.map(user => (user.name === userName ? { ...user, active: !user.active } : user)),
+//   );
+// };
 
 const logger = updatedUsers => console.table(updatedUsers);
 
